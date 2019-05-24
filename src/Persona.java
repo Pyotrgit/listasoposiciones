@@ -6,20 +6,18 @@ import java.io.Serializable;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author adryp
  */
+public class Persona implements Serializable, Comparable<Persona> {
 
-public class Persona implements Serializable,Comparable<Persona>{
-     
     private int numeroOpositor;
     private String NIF;
     private String apellido1;
     private String apellido2;
     private String nombre;
-    
+
     public Persona(int numeroOpositor, String NIF, String apellido1, String apellido2, String nombre) {
         this.numeroOpositor = numeroOpositor;
         this.NIF = NIF;
@@ -27,7 +25,7 @@ public class Persona implements Serializable,Comparable<Persona>{
         this.apellido2 = apellido2;
         this.nombre = nombre;
     }
-    
+
     public int getNumeroOpositor() {
         return numeroOpositor;
     }
@@ -70,27 +68,25 @@ public class Persona implements Serializable,Comparable<Persona>{
 
     @Override
     public int compareTo(Persona t) {
-       if (t==null){
+        if (t == null) {
             //Primero salen los null
             //return 1;
             //Los últimos son los null
             return -1;
         }
-        
-        int [] criterios={
+
+        int[] criterios = {
             this.NIF.compareTo(t.NIF),
             this.nombre.compareTo(t.nombre),
             this.apellido1.compareTo(t.apellido1),
             this.apellido2.compareTo(t.apellido2)
         };
-        for (int unCriterio:criterios){
-            if (unCriterio!=0){
+        for (int unCriterio : criterios) {
+            if (unCriterio != 0) {
                 return unCriterio;
             }
         }
-        return 0; 
+        return 0;
     }
 
-    
 }
-
