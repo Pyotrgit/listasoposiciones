@@ -25,20 +25,17 @@ public class GestorArchivos {
 
         Persona personaActual;
         ArrayList<Persona> solucion = new ArrayList<>();
-        String infoPersonaActual[];
+        String[] notaExamen=new String[8];
         try (BufferedReader lector = new BufferedReader(new FileReader(GestorArchivos.ARCHIVO_PERSONAS))) {
-            do {
-                infoPersonaActual = new String[]{lector.readLine()};
-                if (infoPersonaActual[0] != null) {
-                    infoPersonaActual = infoPersonaActual[0].split(";");
-                    personaActual = new Persona(Integer.parseInt(infoPersonaActual[0]),
-                            infoPersonaActual[1],
-                            infoPersonaActual[2],
-                            infoPersonaActual[3],
-                            infoPersonaActual[4]);
-                    solucion.add(personaActual);
-                }
-            } while (infoPersonaActual[0] != null);
+//            do {
+//                String leerLinea=lector.readLine();
+//                
+//                if (leerLinea != null) {
+//                    notaExamen=leerLinea.split(";+");
+//                    
+//                    solucion.add(notaExamen);
+//                }
+//            } while (infoPersonaActual[0] != null);
             return solucion.toArray(new Persona[solucion.size()]);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(GestorArchivos.class.getName()).log(Level.SEVERE, null, ex);

@@ -12,20 +12,96 @@ import java.io.Serializable;
  */
 public class Persona implements Serializable, Comparable<Persona> {
 
+    // Datos de Notas
     private int numeroOpositor;
     private String NIF;
     private String apellido1;
     private String apellido2;
     private String nombre;
+    private float examenParte1;
+    private float examenParte2;
+    private float notaExamen;
+    
+    // Datos de Meritos
+    private float experiencia;
+    private float titulos;
+    private float cursos;
+    private float notaExperiencia;
 
-    public Persona(int numeroOpositor, String NIF, String apellido1, String apellido2, String nombre) {
+    public Persona(int numeroOpositor, String NIF, String apellido1, String apellido2, String nombre,float examenParte1,float examenParte2,float notaExamen ,float experiencia,float titulos, float cursos, float notaExperiencia) {
         this.numeroOpositor = numeroOpositor;
         this.NIF = NIF;
         this.apellido1 = apellido1;
         this.apellido2 = apellido2;
         this.nombre = nombre;
+        this.examenParte1=examenParte1;
+        this.examenParte2=examenParte2;
+        this.notaExamen=notaExamen;
+        
+        this.experiencia=experiencia;
+        this.titulos=titulos;
+        this.cursos=cursos;
+        this.notaExperiencia=notaExperiencia;
     }
 
+    
+    public float getExamenParte1() {
+        return examenParte1;
+    }
+
+    public void setExamenParte1(float examenParte1) {
+        this.examenParte1 = examenParte1;
+    }
+
+    public float getExamenParte2() {
+        return examenParte2;
+    }
+
+    public void setExamenParte2(float examenParte2) {
+        this.examenParte2 = examenParte2;
+    }
+
+    public float getNotaExamen() {
+        return notaExamen;
+    }
+
+    public void setNotaExamen(float notaExamen) {
+        this.notaExamen = notaExamen;
+    }
+
+    public float getExperiencia() {
+        return experiencia;
+    }
+
+    public void setExperiencia(float experiencia) {
+        this.experiencia = experiencia;
+    }
+
+    public float getTitulos() {
+        return titulos;
+    }
+
+    public void setTitulos(float titulos) {
+        this.titulos = titulos;
+    }
+
+    public float getCursos() {
+        return cursos;
+    }
+
+    public void setCursos(float cursos) {
+        this.cursos = cursos;
+    }
+
+    public float getNotaExperiencia() {
+        return notaExperiencia;
+    }
+
+    public void setNotaExperiencia(float notaExperiencia) {
+        this.notaExperiencia = notaExperiencia;
+    }
+
+    
     public int getNumeroOpositor() {
         return numeroOpositor;
     }
