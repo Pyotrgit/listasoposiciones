@@ -34,7 +34,7 @@ public class GestorArchivos {
 				infoPersonaActual = new String[]{lector.readLine()};
 				if(infoPersonaActual[0] != null)
 				{
-					infoPersonaActual = infoPersonaActual[0].split(";");
+					infoPersonaActual = infoPersonaActual[0].split(";+");
 					personaActual = new Persona(Integer.parseInt(infoPersonaActual[0]), 
 									infoPersonaActual[1], 
 									infoPersonaActual[2], 
