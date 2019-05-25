@@ -17,6 +17,9 @@ import java.util.logging.Logger;
  * @author adryp
  */
 public class GestorArchivos {
+    static{
+        leerNotas();
+    }
 
     //En este archivo irán los datos de todas las personas.
     private final static String ARCHIVO_Notas = "./archivos/notasNotasFinal.txt";
