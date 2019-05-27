@@ -45,6 +45,29 @@ public class Persona implements Serializable, Comparable<Persona> {
         this.notaExperiencia = notaExperiencia;
     }
 
+    //construye una persona con los datos de la tabla de aprobados
+    public Persona(Integer numeroOpositor, String NIF, String apellidos, String nombre, float examenParte1, float examenParte2, float notaExamen) {
+        this.numeroOpositor = numeroOpositor;
+        this.NIF = NIF;
+        this.apellidos = apellidos;
+        this.nombre = nombre;
+        this.examenParte1 = examenParte1;
+        this.examenParte2 = examenParte2;
+        this.notaExamen = notaExamen;
+    }
+
+    //construye una persona con los datos de la tabla de méritos
+    public Persona(Integer numeroOpositor, String NIF, String apellidos, String nombre, float experiencia, float titulos, float cursos, float notaExperiencia) {
+        this.numeroOpositor = numeroOpositor;
+        this.NIF = NIF;
+        this.apellidos = apellidos;
+        this.nombre = nombre;
+        this.experiencia = experiencia;
+        this.titulos = titulos;
+        this.cursos = cursos;
+        this.notaExperiencia = notaExperiencia;
+    }
+    
     public float getExamenParte1() {
         return examenParte1;
     }
