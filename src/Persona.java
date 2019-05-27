@@ -16,12 +16,12 @@ public class Persona implements Serializable, Comparable<Persona> {
     private Integer numeroOpositor;
     private String NIF;
     private String apellidos;
-    
+
     private String nombre;
     private float examenParte1;
     private float examenParte2;
     private float notaExamen;
-    
+
     // Datos de Meritos
     private float experiencia;
     private float titulos;
@@ -29,23 +29,22 @@ public class Persona implements Serializable, Comparable<Persona> {
     private float notaExperiencia;
 
     public Persona(Integer numeroOpositor, String NIF, String apellidos, String nombre,
-            float examenParte1,float examenParte2,float notaExamen ,float experiencia,float titulos, float cursos, float notaExperiencia) {
+            float examenParte1, float examenParte2, float notaExamen, float experiencia, float titulos, float cursos, float notaExperiencia) {
         this.numeroOpositor = numeroOpositor;
         this.NIF = NIF;
         this.apellidos = apellidos;
-        
+
         this.nombre = nombre;
-        this.examenParte1=examenParte1;
-        this.examenParte2=examenParte2;
-        this.notaExamen=notaExamen;
-        
-        this.experiencia=experiencia;
-        this.titulos=titulos;
-        this.cursos=cursos;
-        this.notaExperiencia=notaExperiencia;
+        this.examenParte1 = examenParte1;
+        this.examenParte2 = examenParte2;
+        this.notaExamen = notaExamen;
+
+        this.experiencia = experiencia;
+        this.titulos = titulos;
+        this.cursos = cursos;
+        this.notaExperiencia = notaExperiencia;
     }
 
-    
     public float getExamenParte1() {
         return examenParte1;
     }
@@ -102,7 +101,6 @@ public class Persona implements Serializable, Comparable<Persona> {
         this.notaExperiencia = notaExperiencia;
     }
 
-    
     public int getNumeroOpositor() {
         return numeroOpositor;
     }
@@ -127,7 +125,6 @@ public class Persona implements Serializable, Comparable<Persona> {
         this.apellidos = apellidos;
     }
 
-    
     public String getNombre() {
         return nombre;
     }
@@ -148,9 +145,7 @@ public class Persona implements Serializable, Comparable<Persona> {
         int[] criterios = {
             this.NIF.compareTo(t.NIF),
             this.nombre.compareTo(t.nombre),
-            this.apellidos.compareTo(t.apellidos),
-            
-        };
+            this.apellidos.compareTo(t.apellidos),};
         for (int unCriterio : criterios) {
             if (unCriterio != 0) {
                 return unCriterio;
